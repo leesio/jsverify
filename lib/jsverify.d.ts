@@ -85,7 +85,7 @@ declare namespace JSVerify {
   function sum(arbs: Arbitrary<any>[]): Arbitrary<any>;
 
   function dict<T>(arb: Arbitrary<T>): Arbitrary<{ [s: string]: T }>;
-  function array<T>(arb: Arbitrary<T>): Arbitrary<T[]>;
+  function array<T>(arb: Arbitrary<T>, minSize?: number, maxSize?: number): Arbitrary<T[]>;
   function nearray<T>(arb: Arbitrary<T>): Arbitrary<T[]>;
   function fn<T>(arb: Arbitrary<T>): Arbitrary<(a: any) => T>;
   function fun<T>(arb: Arbitrary<T>): Arbitrary<(a: any) => T>;
